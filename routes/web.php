@@ -14,4 +14,6 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('/picts', 'PictController@index');
+Route::post('/picts', 'PictController@store');
+Route::get('/picts/create', 'PictController@create');
 Route::get('/picts/{pict}', 'PictController@show');

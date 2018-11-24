@@ -16,6 +16,21 @@ class PictController extends Controller
 
     public function show(Pict $pict)
     {
-       return view ('picts.show', ['pict' => $pict]);
+       return view('picts.show', ['pict' => $pict]);
+    }
+
+    public function create()
+    {
+        return view('picts.create');
+    }
+
+    public function store()
+    {
+        Pict::create([
+            'question' => request('question'),
+            'answer' => request('answer'),
+        ]);
+
+        return redirect()->action('PictController@index');
     }
 }
