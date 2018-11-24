@@ -1,7 +1,9 @@
 <head>
   <title>@yield('title','LaraPictGram')</title>
 </head>
-<h1>Welcome</h1>
+<div>
+  <a href="picts"></a>
+</div>
 
 <body>
 @yield('content')

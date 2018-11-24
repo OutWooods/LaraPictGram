@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'WelcomeController@index');
+
+Route::get('/picts', 'PictController@index');
+Route::get('/picts/{pict}', 'PictController@show');
