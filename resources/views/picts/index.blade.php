@@ -11,7 +11,7 @@
         <form action="/picts/{{ $pict->id }}" method="POST">
             @method('DELETE')
             @csrf
-            <input type="submit" value="Delete user">
+            <input type="submit" value="Delete pict">
         </form>
     @endforeach
 @endsection

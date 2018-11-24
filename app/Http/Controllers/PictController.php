@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Pict;
-use Illuminate\Http\Request;
 
 class PictController extends Controller
 {
