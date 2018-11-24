@@ -8,5 +8,10 @@
     @foreach($picts as $pict)
         <p>{{ $pict->question }}</p>
         <a href="/picts/{{ $pict->id }}">See answer</a>
+        <form action="/picts/{{ $pict->id }}" method="POST">
+            @method('DELETE')
+            @csrf
+            <input type="submit" value="Delete user">
+        </form>
     @endforeach
 @endsection

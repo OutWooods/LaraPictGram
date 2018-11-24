@@ -33,4 +33,11 @@ class PictController extends Controller
 
         return redirect()->action('PictController@index');
     }
+
+    public function delete(Pict $pict)
+    {
+        $pict->delete();
+
+        return redirect()->action('PictController@index');
+    }
 }
