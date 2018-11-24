@@ -13,5 +13,4 @@
         <input name="answer" type="text" id="answer">
         <input type="submit" value="create">
     </form>
-
 @endsection
