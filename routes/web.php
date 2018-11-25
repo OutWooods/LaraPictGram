@@ -13,8 +13,10 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('/picts', 'PictController@index');
-Route::post('/picts', 'PictController@store');
-Route::get('/picts/create', 'PictController@create');
-Route::get('/picts/{pict}', 'PictController@show');
-Route::delete('/picts/{pict}', 'PictController@delete');
+Route::get('/picts', 'PictsController@index');
+Route::post('/picts', 'PictsController@store');
+Route::get('/picts/create', 'PictsController@create');
+Route::get('/picts/{pict}', 'PictsController@show');
+Route::patch('/picts/{pict}', 'PictsController@update');
+Route::delete('/picts/{pict}', 'PictsController@destroy');
+Route::get('/picts/{pict}/edit', 'PictsController@edit');

@@ -7,6 +7,7 @@
 
     <form method="POST" action="/picts">
          @csrf
+
         <label for="question">Question</label>
         <input name="question" type="text" id="question">
         <label for="answer">Answer</label>
