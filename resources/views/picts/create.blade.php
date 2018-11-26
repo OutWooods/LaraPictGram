@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'create pict')
+@section('title', 'Create pict')
 
 @section('content')
     <h1>Lets make a pict!</h1>

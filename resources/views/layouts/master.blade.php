@@ -1,5 +1,5 @@
 <head>
-  <title>@yield('title','LaraPictGram')</title>
+  <title>@yield('title','LaraPictoGram')</title>
 </head>
 <div>
   <a href="{{ route('picts.index') }}">See the picts</a>

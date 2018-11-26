@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'edit pict')
+@section('title', 'Edit pict')
 
 @section('content')
     <h1>Edit a pict</h1>
