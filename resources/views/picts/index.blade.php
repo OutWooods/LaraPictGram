@@ -4,12 +4,15 @@
 
 @section('content')
     <h1>See all the marvelous picts!</h1>
-    <h2>Or <a href="/picts/create">make</a> one yourself!</h2>
+    <h2>Or <a href="{{  route('picts.create') }}">make</a> one yourself!</h2>
+
     @foreach($picts as $pict)
         <p>{{ $pict->question }}</p>
-        <a href="/picts/{{ $pict->id }}">See answer</a>
-        <a href="/picts/{{ $pict->id }}/edit">Edit pict</a>
-        <form action="/picts/{{ $pict->id }}" method="POST">
+
+        <a href="{{ route('picts.show', $pict->id) }}">See answer</a>
+        <a href="{{ route('picts.edit', $pict->id) }}">Edit pict</a>
+
+        <form action="{{ route('picts.destroy', $pict->id) }}" method="POST">
             @method('DELETE')
             @csrf
 

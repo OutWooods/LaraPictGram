@@ -5,7 +5,7 @@
 @section('content')
     <h1>Lets make a pict!</h1>
 
-    <form method="POST" action="/picts">
+    <form method="POST" action="{{ route('picts.store') }}">
          @csrf
 
         <label for="question">Question</label>
