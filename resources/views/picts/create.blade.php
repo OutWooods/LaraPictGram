@@ -6,12 +6,19 @@
     <h1>Lets make a pict!</h1>
 
     <form method="POST" action="{{ route('picts.store') }}">
-         @csrf
+        @csrf
 
         <label for="question">Question</label>
-        <input name="question" type="text" id="question">
+        <input id="question"
+               type="text"
+               ame="question">
+
         <label for="answer">Answer</label>
-        <input name="answer" type="text" id="answer">
-        <input type="submit" value="create">
+        <input id="answer"
+               type="text"
+               name="answer">
+
+        <input type="submit"
+               value="create">
     </form>
 @endsection

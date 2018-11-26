@@ -4,6 +4,7 @@
 
 @section('content')
     <h1>Edit a pict</h1>
+
     <form method="POST"
           action="{{ route('picts.update', $pict->id) }}">
         @method('PATCH')

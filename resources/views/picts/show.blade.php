@@ -5,5 +5,6 @@
 @section('content')
     <h1>Question: {{ $pict->question }}</h1>
     <p>Answer: {{ $pict->answer }}</p>
-    <a href="{{ route('picts.edit', $pict->id) }}/edit">Edit</a>
+
+    <a href="{{ route('picts.edit', $pict->id) }}">Edit</a>
 @endsection
