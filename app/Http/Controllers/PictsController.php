@@ -25,30 +25,21 @@ class PictsController extends Controller
 
     public function store()
     {
-        Pict::create([
-            'question' => request('question'),
-            'answer' => request('answer'),
-        ]);
+        Pict::create(request(['question', 'answer']));
 
         return redirect('/picts');
     }
 
-    public function edit($id)
+    public function edit(Pict $pict)
     {
-        $pict = Pict::findOrFail($id);
-
         return view('picts.edit', compact('pict'));
     }
 
-    public function update($id)
+    public function update(Pict $pict)
     {
-        Pict::findOrFail($id)
-            ->update([
-                'question' => request('question'),
-                'answer' => request('answer'),
-            ]);
+        $pict->update(request(['question', 'answer']));
 
-        return redirect("/picts/{$id}");
+        return redirect("/picts/{$pict->id}");
     }
 
     public function destroy(Pict $pict)
