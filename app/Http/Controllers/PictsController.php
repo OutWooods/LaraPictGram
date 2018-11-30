@@ -25,6 +25,11 @@ class PictsController extends Controller
 
     public function store()
     {
+        request()->validate([
+            'question' => 'required',
+            'answer' => 'required',
+        ]);
+
         Pict::create(request(['question', 'answer']));
 
         return redirect('/picts');
