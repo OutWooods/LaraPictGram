@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Pict;
+use App\Http\Requests\PictStoreRequest;
+use App\Http\Requests\PictUpdateRequest;
 
 class PictsController extends Controller
 {
@@ -23,14 +25,9 @@ class PictsController extends Controller
         return view('picts.create');
     }
 
-    public function store()
+    public function store(PictStoreRequest $request)
     {
-        request()->validate([
-            'question' => 'required',
-            'answer' => 'required',
-        ]);
-
-        Pict::create(request(['question', 'answer']));
+        Pict::create($request->validated());
 
         return redirect('/picts');
     }
@@ -40,9 +37,9 @@ class PictsController extends Controller
         return view('picts.edit', compact('pict'));
     }
 
-    public function update(Pict $pict)
+    public function update(Pict $pict, PictUpdateRequest $request)
     {
-        $pict->update(request(['question', 'answer']));
+        $pict->update($request->validated());
 
         return redirect("/picts/{$pict->id}");
     }

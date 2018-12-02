@@ -10,6 +10,7 @@
 
     <label for="question">Question</label>
     <input
+      required
       id="question"
       type="text"
       name="question"
@@ -18,6 +19,7 @@
 
     <label for="answer">Answer</label>
     <input
+      required
       id="answer"
       type="text"
       name="answer"
