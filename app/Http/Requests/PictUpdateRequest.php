@@ -24,8 +24,8 @@ class PictUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'question' => 'sometimes|string',
-            'answer' => 'sometimes|string',
+            'question' => 'sometimes|string|min:3',
+            'answer' => 'sometimes|string|min:3',
         ];
     }
 }

@@ -24,8 +24,8 @@ class PictStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'question' => 'required',
-            'answer' => 'required',
+            'question' => 'required|string|min:3',
+            'answer' => 'required|string|min:3',
         ];
     }
 }
