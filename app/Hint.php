@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Pict extends Model
+class Hint extends Model
 {
     protected $guarded = [];
 
-    public function hints()
+    public function pict()
     {
-       return $this->hasMany(Hint::class);
+        return $this->belongsTo(Pict::class);
     }
 }
